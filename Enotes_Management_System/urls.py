@@ -1,0 +1,43 @@
+"""Enotes_Management_System URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/3.2/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path
+from enotes.views import *
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', index, name='index'),
+    path('about', about, name='about'),
+    path('register/', register, name='register'),
+    path('user_login', user_login, name='user_login'),
+    path('dashboard', dashboard, name='dashboard'),
+    path('profile', profile, name='profile'),
+    path('manageCategory', manageCategory, name='manageCategory'),
+    path('manageNotes', manageNotes, name='manageNotes'),
+    path('editCategory/<int:pid>', editCategory, name='editCategory'),
+    path('deleteCategory/<int:pid>', deleteCategory, name='deleteCategory'),
+    path('generalCategory', generalCategory, name='generalCategory'),
+    path('specificCategory', specificCategory, name='specificCategory'),
+    path('resultSpecific',resultSpecific, name='resultSpecific'),
+    path('resultGeneral',resultGeneral, name='resultGeneral'),
+    path('viewNotes/<int:id>/', viewNotes, name='viewNotes'),
+    path('editNotes/<int:pid>', editNotes, name='editNotes'),
+    path('deleteNotesHistory/<int:pid>', deleteNotesHistory, name='deleteNotesHistory'),
+    path('searchNotes', searchNotes, name='searchNotes'),
+    path('deleteNotes/<int:pid>', deleteNotes, name='deleteNotes'),
+    path('changePassword', changePassword, name='changePassword'),
+    path('logout/', Logout, name='logout'),
+]

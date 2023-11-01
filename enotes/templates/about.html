@@ -1,0 +1,55 @@
+{% include 'navbar.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<html>
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>This is a simple <b>Online Note Categorization</b> system where notes by users are automatically classified into different categories. </p>
+  <p>Web application is built by using <b>Django</b> framework, <b>Python</b> language, <b>SQLite</b> database and  <b>Html</b>, <b>CSS</b> and <b>Bootstrap</b> for design.</p>
+  <p>Machine learning model is built by using <b>20newsgroups</b> dataset, <b>sklearn</b> library and <b>Multinomial Naive Bayes</b> algorithm.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="static/images/prajall.jpg" alt="Prazwal" style="width: 100%;height: 800px; object-fit: cover;">
+      <div class="container">
+        <h2>Prajwal Sunam</h2>
+        <p class="title">Machine Learning</p>
+        <p>"It is what is."</p>
+        <p>prajwalsunam89@email.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="static/images/Saurav.jpg" alt="Saurav" style="width:100%;height: 800px; object-fit: cover;">
+      <div class="container">
+        <h2>Saurav Shrestha</h2>
+        <p class="title">Front End</p>
+        <p>"Aesthetics is all that matters." </p>
+        <p>sthasaurav122@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="static/images/anu.jpg" alt="Anu" style="width:100%;height: 800px; object-fit: cover;">
+      <div class="container">
+        <h2>Anu Sunam</h2>
+        <p class="title">Database</p>
+        <p>"Rich Data Poor Knowledge."</p>
+        <p>anupraiyar635@email.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</html>
+
+
